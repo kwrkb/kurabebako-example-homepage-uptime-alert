@@ -25,7 +25,7 @@ wait_monitor() {
   log "monitor が $want にならなかった"; return 1
 }
 
-# 直近の incident と、その incident で送られた通知（送信先の値は伏せる）
+# 直近の incident と、その incident で送られた通知（送信先の名前と値は出さない）
 show_alerts() {
   local inc id
   inc=$(ur GET "/incidents?monitor_id=$mid")
@@ -33,7 +33,7 @@ show_alerts() {
   [ -n "$id" ] || { log "incident が無い"; return 0; }
   state_set incident_id "$id"
   log "incident $id: $(jq -c '.data[0] | {status, reason, startedAt, resolvedAt, duration}' <<<"$inc")"
-  log "alerts: $(ur GET "/incidents/$id/alerts" | jq -c '[.data[] | {timestamp, channelType, recipientName, status}]')"
+  log "alerts: $(ur GET "/incidents/$id/alerts" | jq -c '[.data[] | {timestamp, channelType, status}]')"
 }
 
 st=$(ur GET "/monitors/$mid" | jq -r .status)

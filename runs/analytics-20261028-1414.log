@@ -1,0 +1,2 @@
+2026-10-28T14:14:22Z POST api.cloudflare.com/client/v4/graphql -> 200 (3219 ms)
+2026-10-28T14:14:22Z pageloads(7d): [{"avg":{"sampleInterval":1},"count":3,"sum":{"visits":3}}]

@@ -1,0 +1,10 @@
+2026-10-28T14:22:29Z --- GitHub Pages を有効化する（build_type=legacy, source=main:/） ---
+2026-10-28T14:22:33Z POST repos/kwrkb/kurabebako-example-homepage-uptime-alert/pages -> 201 html_url=https://kwrkb.github.io/kurabebako-example-homepage-uptime-alert/
+2026-10-28T14:22:34Z pages.status=building
+2026-10-28T14:22:49Z pages.status=building
+2026-10-28T14:23:05Z pages.status=building
+2026-10-28T14:23:21Z pages.status=building
+2026-10-28T14:23:37Z pages.status=built
+2026-10-28T14:23:39Z pages: status=built html_url=https://kwrkb.github.io/kurabebako-example-homepage-uptime-alert/ build=built build_error=-
+2026-10-28T14:23:39Z site: GET https://kwrkb.github.io/kurabebako-example-homepage-uptime-alert/ -> 200
+2026-10-28T14:23:40Z 有効化から 200 まで 69 秒

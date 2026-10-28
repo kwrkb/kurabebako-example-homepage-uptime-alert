@@ -1,0 +1,40 @@
+2026-10-28T14:12:04Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1584 ms)
+2026-10-28T14:12:05Z === 開始。monitor 804453453 status=UP ===
+2026-10-28T14:12:05Z --- 1. Pages を無効化して 404 にする ---
+2026-10-28T14:21:22Z --- 2. UptimeRobot が DOWN を検知するまで ---
+2026-10-28T14:21:24Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1530 ms)
+2026-10-28T14:21:24Z monitor: status=DOWN
+2026-10-28T14:21:24Z 検知まで 2 秒（404 になってから）
+2026-10-28T14:22:27Z GET api.uptimerobot.com/v3/incidents?monitor_id=804453453 -> 200 (1611 ms)
+2026-10-28T14:22:27Z incident 373836528851399107: {"status":"Ongoing","reason":"404 Not Found","startedAt":"2026-10-28T14:12:54.025Z","resolvedAt":null,"duration":null}
+2026-10-28T14:22:29Z GET api.uptimerobot.com/v3/incidents/373836528851399107/alerts -> 200 (1028 ms)
+2026-10-28T14:22:29Z alerts: [{"timestamp":"2026-10-28T14:12:55.000Z","channelType":"Email","status":"SUCCESS"}]
+2026-10-28T14:22:29Z --- 3. 再公開して UP に戻るまで ---
+2026-10-28T14:23:42Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1614 ms)
+2026-10-28T14:23:43Z monitor: status=DOWN
+2026-10-28T14:24:15Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1576 ms)
+2026-10-28T14:24:15Z monitor: status=DOWN
+2026-10-28T14:24:47Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1725 ms)
+2026-10-28T14:24:47Z monitor: status=DOWN
+2026-10-28T14:25:19Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1353 ms)
+2026-10-28T14:25:19Z monitor: status=DOWN
+2026-10-28T14:25:51Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1347 ms)
+2026-10-28T14:25:52Z monitor: status=DOWN
+2026-10-28T14:26:24Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1407 ms)
+2026-10-28T14:26:24Z monitor: status=DOWN
+2026-10-28T14:26:56Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1384 ms)
+2026-10-28T14:26:56Z monitor: status=DOWN
+2026-10-28T14:27:28Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1305 ms)
+2026-10-28T14:27:28Z monitor: status=DOWN
+2026-10-28T14:28:00Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1651 ms)
+2026-10-28T14:28:00Z monitor: status=DOWN
+2026-10-28T14:28:32Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1371 ms)
+2026-10-28T14:28:32Z monitor: status=DOWN
+2026-10-28T14:29:04Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1392 ms)
+2026-10-28T14:29:05Z monitor: status=UP
+2026-10-28T14:29:05Z 復旧の検知まで 324 秒（200 に戻ってから）
+2026-10-28T14:30:07Z GET api.uptimerobot.com/v3/incidents?monitor_id=804453453 -> 200 (1381 ms)
+2026-10-28T14:30:08Z incident 373836528851399107: {"status":"Resolved","reason":"404 Not Found","startedAt":"2026-10-28T14:12:54.025Z","resolvedAt":"2026-10-28T14:28:07.025Z","duration":913}
+2026-10-28T14:30:10Z GET api.uptimerobot.com/v3/incidents/373836528851399107/alerts -> 200 (1480 ms)
+2026-10-28T14:30:10Z alerts: [{"timestamp":"2026-10-28T14:28:09.000Z","channelType":"Email","status":"SUCCESS"},{"timestamp":"2026-10-28T14:12:55.000Z","channelType":"Email","status":"SUCCESS"}]
+2026-10-28T14:30:10Z === 終了。全体 1020 秒 ===
