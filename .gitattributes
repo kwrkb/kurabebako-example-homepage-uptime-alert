@@ -1,0 +1,2 @@
+# bash スクリプトが CRLF で壊れないよう、全ファイル LF で固定する
+* text=auto eol=lf

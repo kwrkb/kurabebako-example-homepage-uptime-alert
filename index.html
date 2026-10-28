@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 解説は kurabebako.com の作例記事に置く。検索ではそちらを入口にしたいので、このページは索引に載せない -->
+  <meta name="robots" content="noindex">
+  <title>AI が公開して、監視して、数えているページ | kurabebako 作例</title>
+  <meta name="description" content="GitHub Pages で公開し、UptimeRobot が 5 分おきに見に来て、Cloudflare Web Analytics が訪問を数えている 1 ページ。作ったのは Claude、判断と確認は人間。">
+  <link rel="stylesheet" href="style.css">
+  <!-- cf-beacon: ここに Cloudflare Web Analytics のビーコンが入る（scripts/analytics.sh create が書き換える） -->
+</head>
+<body>
+  <main>
+    <p class="eyebrow">kurabebako の作例 1</p>
+    <h1>AI が公開して、監視して、数えているページ</h1>
+    <p class="lead">
+      このページは <strong>GitHub Pages</strong> で公開され、<strong>UptimeRobot</strong> が 5 分おきに見に来て、
+      <strong>Cloudflare Web Analytics</strong> が訪問を数えています。
+      作ったのは Claude、判断と確認は人間が行いました。
+    </p>
+
+    <section>
+      <h2>何が動いているか</h2>
+      <ol class="parts">
+        <li>
+          <h3>公開: GitHub Pages</h3>
+          <p>このリポジトリの <code>main</code> をそのまま配信しています。ビルドは不要で、HTML と CSS を push するだけです。</p>
+          <p class="ref"><a href="https://kurabebako.com/posts/static-site-hosting-free-tier/">静的サイトの無料ホスティング比較</a></p>
+        </li>
+        <li>
+          <h3>監視: UptimeRobot</h3>
+          <p>5 分おきにこの URL へ HTTP で見に来て、応答が返らなくなるとメールで知らせます。復旧したときもメールが来ます。</p>
+          <p class="ref"><a href="https://kurabebako.com/posts/uptime-monitoring-free-tier/">死活監視の無料枠比較</a></p>
+        </li>
+        <li>
+          <h3>解析: Cloudflare Web Analytics</h3>
+          <p>ページの末尾に置いた 1 行のタグが、訪問を Cloudflare に送ります。Cookie は使いません。</p>
+          <p class="ref"><a href="https://kurabebako.com/posts/analytics-free-tier/">アクセス解析の無料枠比較</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>どう作ったか</h2>
+      <p>
+        公開・監視・解析の登録は、すべて公式の API を Claude が呼んで行いました。手順と実行ログは
+        <a href="https://github.com/kwrkb/kurabebako-example-homepage-uptime-alert">リポジトリ</a>にあり、
+        なぜこの組み合わせにしたかは
+        <a href="https://kurabebako.com/examples/homepage-uptime-alert/">作例の記事</a>に書いています。
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p><a href="https://kurabebako.com/">kurabebako</a> — AI ツール・開発環境・SaaS の比較サイト</p>
+  </footer>
+</body>
+</html>
