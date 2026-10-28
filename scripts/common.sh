@@ -35,7 +35,10 @@ http() {
   local t0 out status; t0=$(ms)
   out=$(curl "${args[@]}" "$url")
   status=$(head -1 "$HDR" | awk '{print $2}')
-  log "$method ${url#https://} -> $status ($(( $(ms) - t0 )) ms)"
+  # ログに残す URL からアカウント ID を伏せる（op run が隠すのは標準出力だけで、ファイルには素で残るため）
+  local shown=${url#https://}
+  [ -n "${CF_ACCOUNT_ID:-}" ] && shown=${shown//$CF_ACCOUNT_ID/<account_id>}
+  log "$method $shown -> $status ($(( $(ms) - t0 )) ms)"
   printf '%s' "$out"
 }
 

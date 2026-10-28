@@ -1,0 +1,6 @@
+2026-10-28T14:09:09Z --- Cloudflare Web Analytics のサイトを作る（host=kwrkb.github.io） ---
+2026-10-28T14:09:10Z GET api.cloudflare.com/client/v4/user/tokens/verify -> 200 (1159 ms)
+2026-10-28T14:09:11Z token: status=active expires_on=2026-11-30T14:59:59Z
+2026-10-28T14:09:13Z POST api.cloudflare.com/client/v4/accounts/<account_id>/rum/site_info -> 200 (1514 ms)
+2026-10-28T14:09:14Z site_tag=cd6a84d367554bd0948d3d79cb811c46 created=2026-10-28T14:09:12.582715Z keys=auto_install,created,host,id_please_delete,site_tag,site_token
+2026-10-28T14:09:14Z index.html のビーコン行を書き換えた（commit は人が確認してから）

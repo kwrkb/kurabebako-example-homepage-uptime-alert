@@ -1,0 +1,12 @@
+2026-10-28T06:49:55Z --- 通知先を選ぶ ---
+2026-10-28T06:49:57Z GET api.uptimerobot.com/v3/user/alert-contacts -> 200 (1843 ms)
+2026-10-28T06:49:57Z alert contacts: [{"id":8784722,"type":"Email","name":"-"}]
+2026-10-28T06:49:57Z use alert contact id=8784722
+2026-10-28T06:49:58Z --- モニターを作る（HTTP, 300 秒, https://kwrkb.github.io/kurabebako-example-homepage-uptime-alert/） ---
+2026-10-28T06:49:59Z POST api.uptimerobot.com/v3/monitors -> 201 (1371 ms)
+2026-10-28T06:50:00Z created: id=804453453 status=STARTED interval=300 contacts=[{"alertContactId":8784722,"threshold":0,"recurrence":0}]
+2026-10-28T06:50:00Z --- 初回チェックが反映されるまで追う（最大 8 分） ---
+2026-10-28T06:50:03Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1533 ms)
+2026-10-28T06:50:03Z poll 1: status=STARTED
+2026-10-28T06:51:05Z GET api.uptimerobot.com/v3/monitors/804453453 -> 200 (1149 ms)
+2026-10-28T06:51:05Z poll 2: status=UP
